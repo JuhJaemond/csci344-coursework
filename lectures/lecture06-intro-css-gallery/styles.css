@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: cornflowerblue;
+    padding: 48px;
+}
+
+section:hover {
+    border: solid 1px black;
+    display: inline-block;
+    margin: 28px;
+}
+
+main {
+    border: solid 1px brown;
+}
+/* Your code here */
