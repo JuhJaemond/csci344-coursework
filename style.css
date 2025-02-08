@@ -1,7 +1,31 @@
 body {
-    background-color: lightblue;
+    background-color: #c07d39;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    margin: 10px;
 }
 
 h1, h2 {
-    color: darkmagenta;
+    color: #100F29;
+    font-size: 50px;
+}
+
+section {
+    background-color: #65282e;
+}
+
+ul {
+    padding: 15px;
+    margin: 20px;
+    color: #18113c;
+}
+
+a {
+    color:#18847b ;
+
+}
+
+a:hover {
+    color: #EAE190;
+    
 }
