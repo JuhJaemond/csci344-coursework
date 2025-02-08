@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+}
+
+.card {
+    border: solid black 1px;
+    height: 200px;
+    width: 600px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: auto;
+    justify-content: center;
+    width: 100%;
+}
+
+
+section div {
+    background-color: burlywood;
+    padding: 15px;
+}
+
+section img {
+    /* background-color: green; */
+    padding: 15px;
+    display: flex;
+    margin-left: auto;
+    margin-right: 15px;
+}
