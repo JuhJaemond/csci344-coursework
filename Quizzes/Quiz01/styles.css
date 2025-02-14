@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@media screen {
+    
+    
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+header {
+    display: flex;
+    background-color: #013672;
+}
+
+header > nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #ffff;
+    padding: 10px
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(4 1f);
+    gap: 10px;
+    align-items: start;
+}
+
+header img,
+footer img {
+    width: 200px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 h2 {
+    margin-top: 15px;
+}
+
+h1 h2 h3 {
+    font-family:"Passion One", bold; /* I'm not sure why its not working */
+}
