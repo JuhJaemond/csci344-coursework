@@ -1,0 +1,28 @@
+body {
+    margin: 0 auto;
+}
+
+.container {
+    
+}
+
+
+
+/* Mobile Design */
+
+/* @media screen and (max-width: 800px) {
+    .basicnav div {
+    
+    }
+    
+    header {
+        background-color: #444;
+        color: #F7604F;
+        height: 10vh;
+    }
+
+    main {
+        background-color: #FFDBC4;
+        color: #734A45;
+    }
+} */
