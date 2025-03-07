@@ -19,3 +19,31 @@
     4. Use the cheatsheet associated with this tutorial to figure out how to adjust
        the class.
 */
+
+function changeClass(nameOfClass) {
+   const body = document.querySelector("body");
+   body.className = nameOfClass;
+}
+
+
+/*
+Class Notes!
+
+Need to have each button change when clicked 
+
+   > Create a new function changeClass() {}
+      -> within this func:
+         --> target the body
+            ---> const body = document.querySelector("body");
+         --> change the class name
+* remember! to get the code to run, it has to be applied to the button (onclick)(w/in the HTML)
+   -> onclick="changeClass()"
+
+   > Instead of hard coding one present (i.e. body.className = "ocean";) we're going to set a param. 
+      -> function changeClass(nameOfClass)
+      and set that to the var. > body.className = nameOfClass;
+
+   > Since we've made a requirement, we need to pass a string representing the class (w/in the HTML)
+      ->  <button id="ocean" title="Change to 'Ocean' theme" onclick="changeClass('ocean')">Ocean</button>
+
+*/

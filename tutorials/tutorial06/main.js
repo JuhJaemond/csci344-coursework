@@ -28,9 +28,27 @@ const doesTermMatch = (course) => {
 // Part 1.2
 const dataToHTML = (course) => {
     // modify this to be more detailed
+    let status;
+    if (isClassFull(course)) {
+        status = '<i class="fa-solid fa-circle-check"></i> Closed'
+    } else {
+        status = '<i class="fa-solid fa-circle-check"></i> Open'
+    }
+    const seatsAvailable = course.EnrollmentMax - EnrollmentCurrent;
+    if (seatsAvailable < 0) {
+        seatsAvailable = 0;
+    }
     return `
-        <section class="course">
-            ${course.Code}
+   <section class="course">
+            <h2>${course.Code}: ${course.Title}</h2>
+            <p>
+                <i class="fa-solid fa-circle-check"></i> 
+                ${status}  &bull; ${course.CRN} &bull; Seats Available: 1
+            </p>
+            <p>
+                ${course.Days || "TBD"} &bull; ${course.Location.FullLocation|| "TBD"} &bull; ${course.Hours}
+            </p>
+            <p>${course.Instructors[0].Name}</p>
         </section>
     `;
 };
@@ -48,16 +66,11 @@ const showMatchingCourses = () => {
     let matches = courseList.filter(doesTermMatch);
 
     matches.forEach((course) => {
+        // if the class is open, show it:
         const snippet = dataToHTML(course);
         container.insertAdjacentHTML("beforeend", snippet);
-    })
-
-
-
-
-    // courseList.forEach((course) => {
-    //     const snippet = dataToHTML(course);
-    //     container.insertAdjacentHTML("beforeend", snippet);
-
-    // )};
+    }
+    )
 };
+
+
