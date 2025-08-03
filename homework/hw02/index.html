@@ -1,55 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Photo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>HW02 Starter Code</title>
 </head>
-<body>
-        <!--Nav bar-->
-    <div id="nav">
-        <a>PhotoApp</a>
-        <div id="navRight">
-            <a>JuhJaemond</a>
-            <a>Sign Out</a>
-        </div>
-    </div>
-        <!--End of Nav Bar-->
 
-        <!--Posted Content-->
+<body>
+    <!-- nav (fixed)-->
+    <header class="top-nav">
+        <h1 class="logo">
+           Photo App
+        </h1>
+        <nav>
+           <h2>
+            <a>JuhJaemond</a>
+           </h2>
+           <h2>
+            <a>Sign Out</a>
+           </h2>
+        </nav>
+    </header>
+
+    <!-- main panel -->
     <main>
-        <section>
-            
+        <!-- recommend panel (fixed)-->
+        <aside class="recommend">
+            <header>
+                <img src="https://picsum.photos/100/" alt="randomly generated image">
+                <span>JuhJaemond</span>
+            </header>
+            <section class="accounts">
+                <span>Suggestions for you</span>
+
+                <!-- account sugg -->
+                <section>
+                    <img src="https://picsum.photos/100//" alt="randomly generated image">
+                    <div>
+                        <span>
+                            ACCOUNT NAME
+                        </span>
+                        <p>
+                            suggested for you
+                        </p>
+                    </div>
+                    <span>
+                        follow
+                    </span>
+                </section>
+                <section>
+                    <img src="https://picsum.photos/100///" alt="randomly generated image">
+                    <div>
+                        <span>
+                            ACCOUNT NAME
+                        </span>
+                        <p>
+                            suggested for you
+                        </p>
+                    </div>
+                    <span>
+                        follow
+                    </span>
+                </section>
+                <section>
+                    <img src="https://picsum.photos/100////" alt="randomly generated image">
+                    <div>
+                        <span>
+                            ACCOUNT NAME
+                        </span>
+                        <p>
+                            suggested for you
+                        </p>
+                    </div>
+                    <span>
+                        follow
+                    </span>
+                </section>
+                <section>
+                    <img src="https://picsum.photos/100/////" alt="randomly generated image">
+                    <div>
+                        <span>
+                            ACCOUNT NAME
+                        </span>
+                        <p>
+                            suggested for you
+                        </p>
+                    </div>
+                    <span>
+                        follow
+                    </span>
+                </section>
+                <section>
+                    <img src="https://picsum.photos/100//////" alt="randomly generated image">
+                    <div>
+                        <span>
+                            ACCOUNT NAME
+                        </span>
+                        <p>
+                            suggested for you
+                        </p>
+                    </div>
+                    <span>
+                        follow
+                    </span>
+                </section>
+            </section>
+        </aside>
+
+
+        <section class="news-feed">
+            <!-- stories -->
+            <header class="stories">
+                <div>
+                    <img src="https://picsum.photos/100//" alt="randomly generated image">
+                    <h3>
+                        ACCOUNT NAME
+                    </h3>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/100///" alt="randomly generated image">
+                    <h3>
+                        ACCOUNT NAME
+                    </h3>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/100////" alt="randomly generated image">
+                    <h3>
+                        ACCOUNT NAME
+                    </h3>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/100/////" alt="randomly generated image">
+                    <h3>
+                        ACCOUNT NAME
+                    </h3>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/100//////" alt="randomly generated image">
+                    <h3>
+                        ACCOUNT NAME
+                    </h3>
+                </div>
+            </header>
+
+            <!-- posts -->
+            <section class="post">
+                <div>
+                    <h2>
+                        ACCOUNT NAME
+                    </h2>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div><img src="https://fakeimg.pl/300x200" alt="randomly generated image"></div>
+                <div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <div>
+                    <h3>30 likes</h3>
+                </div>
+                <section>
+                    <!-- COMMENTS SECTION -->
+                    <div>
+                        <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere...<span>more</span></p>
+                    </div>
+                    <div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean.</p>
+                        </div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id.</p>
+                        </div>
+                        <p>1 DAY AGO</p>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <i class="fa-regular fa-face-laugh-wink"></i>
+                    <p>Add a comment...<span>Post</span></p>
+                    </div>
+                </section>
+            </section>
+            <section class="post">
+                <div>
+                    <span>
+                        ACCOUNT NAME
+                    </span>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div><img src="https://fakeimg.pl/300x200" alt="randomly generated image"></div>
+                <div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <div>
+                    <h3>30 likes</h3>
+                </div>
+                <section>
+                    <!-- COMMENTS SECTION -->
+                    <div>
+                        <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere...<span>more</span></p>
+                    </div>
+                    <div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean.</p>
+                        </div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id.</p>
+                        </div>
+                        <p>1 DAY AGO</p>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <i class="fa-regular fa-face-laugh-wink"></i>
+                    <p>Add a comment...</p>
+                    
+                    </div>
+                </section>
+            </section>
+            <section class="post">
+                <div>
+                    <span>
+                        ACCOUNT NAME
+                    </span>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div><img src="https://fakeimg.pl/300x200" alt="randomly generated image"></div>
+                <div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <div>
+                    <h3>30 likes</h3>
+                </div>
+                <section>
+                    <!-- COMMENTS SECTION -->
+                    <div>
+                        <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere...<span>more</span></p>
+                    </div>
+                    <div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean.</p>
+                        </div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id.</p>
+                        </div>
+                        <p>1 DAY AGO</p>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <i class="fa-regular fa-face-laugh-wink"></i>
+                    <p>Add a comment...</p>
+                    
+                    </div>
+                </section>
+            </section>
+            <section class="post">
+                <div>
+                    <span>
+                        ACCOUNT NAME
+                    </span>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div><img src="https://fakeimg.pl/300x200" alt="randomly generated image"></div>
+                <div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <div>
+                    <h3>30 likes</h3>
+                </div>
+                <section>
+                    <!-- COMMENTS SECTION -->
+                    <div>
+                        <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere...<span>more</span></p>
+                    </div>
+                    <div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean.</p>
+                        </div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id.</p>
+                        </div>
+                        <p>1 DAY AGO</p>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <i class="fa-regular fa-face-laugh-wink"></i>
+                    <p>Add a comment...</p>
+                    
+                    </div>
+                </section>
+            </section>
+            <section class="post">
+                <div>
+                    <span>
+                        ACCOUNT NAME
+                    </span>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div><img src="https://fakeimg.pl/300x200" alt="randomly generated image"></div>
+                <div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <div>
+                    <h3>30 likes</h3>
+                </div>
+                <section>
+                    <!-- COMMENTS SECTION -->
+                    <div>
+                        <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere...<span>more</span></p>
+                    </div>
+                    <div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean.</p>
+                        </div>
+                        <div>
+                            <p> <span>ACCOUNT NAME</span> Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id.</p>
+                        </div>
+                        <p>1 DAY AGO</p>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <i class="fa-regular fa-face-laugh-wink"></i>
+                    <p>Add a comment...</p>
+                    
+                    </div>
+                </section>
+            </section>
         </section>
     </main>
-        <!--End of Posted Content-->
-
-        <!--Recommendations Panel-->
-    <section id="rec">
-        <div>
-            <img src="https://picsum.photos/40/40">
-            <p>JuhJaemond</p>
-        </div>
-        <div>
-            <p>Suggestions for You</p>
-            <div class="recProfile">
-                <img src="https://picsum.photos/40/40">
-                <div>
-                    <p>Profile 1</p>
-                    <p>suggested for you</p>
-                </div>
-                <p>follow</p>
-            </div>
-        </div>
-    </section>
-        <!--End of Recommendations Panel-->
-
 </body>
+
 </html>
-
-
-
-
- 
-    

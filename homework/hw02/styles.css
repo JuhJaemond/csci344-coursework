@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+
+body * {
+    box-sizing: border-box;
+}
+
+/* * {
+    border: 1px solid black;
+} */
+
+body {
+    margin: 0;
+    background: #eaeaea;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Comfortaa';
+    font-size: 1.1em;
+}
+
+.top-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.post {
+    min-height: 300px;
+    border: solid 1px black;
+    margin-bottom: 50px;
+}
+
+.stories {
+    min-height: 100px;
+    border: solid 1px black;
+    margin-bottom: 50px;
+}
+
+.recommend {
+    position: fixed;
+    top: 100px;
+    left: 70vw;
+    min-height: 60vh;
+    width: 28vw;
+}
+
+main {
+    width: 63vw;
+    margin-top: 23px;
+    margin-left: 5vw;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-nav nav h2:last-child {
+    color: rgb(0, 110, 174);
+}
+
+.top-nav nav h2 {
+    font-size: 1em;
+}
+
+.recommend > header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    gap: 5px;
+}
+
+.recommend > header img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.recommend > header span {
+    font-size: 2em;
+    padding-left: 20px;
+}
+
+.accounts {
+    display: flex;
+    flex-direction: column;
+}
+
+.accounts > span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.3em;
+    color: rgb(114, 114, 114);
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+}
+
+.accounts section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding: 10px; */
+    gap: 30px;
+    margin: 5px; 
+}
+
+.accounts section img, .stories div img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.accounts div span {
+    font-weight: bold;
+}
+
+.accounts > section > span {
+    padding: 10px;
+    color: rgb(0, 110, 174);
+}
+
+.stories {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: white;
+}
+
+.stories > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: .5em;
+}
+
+.stories h3 {
+    font-size: 1.4em;
+}
+
+.stories > div img {
+    border: 2px solid rgb(167, 167, 167);
+}
+
+.stories > div span, .accounts div span {
+    padding: 5px;
+}
+
+.post {
+    padding: 5px;
+    background-color: white;
+}
+
+.post > div:nth-of-type(2) img {
+    width: 100%;
+    height: auto; 
+    display: block;
+}
+
+.post > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.post > div:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.post > div:nth-of-type(3) > div {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    gap: 10px;
+
+}
+
+.post > div:nth-of-type(4) > h3 {
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.post > section > div > p > span:first-of-type {
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.post p > span:first-of-type {
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.post > section > div > p > span:last-of-type {
+    color: rgb(0, 110, 174);
+    padding: 5px;
+}
+
+.post > section > div:nth-of-type(2) > p:last-child {
+    color: rgb(85, 85, 85);
+    font-size: 0.9em;
+}
+
+
+.post > section:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+}
+
+.post > section:nth-of-type(2) > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+.post > section:nth-of-type(2) > div > p {
+    width: 792px;
+    color: rgb(85, 85, 85);
+}
+
+
+.post section > div > span:last-child {
+    color: rgb(0, 110, 174);
+}
+
+
+.post > div:nth-of-type(1) {
+    margin: 10px;
+}
+
+.post > div:nth-of-type(2) {
+    margin: 10px;
+}
+
+.post > section {
+    margin: 10px;
+}
+
+i {
+    font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .recommend {
+        display: none;
+    }
+
+    main {
+        width: auto;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+}

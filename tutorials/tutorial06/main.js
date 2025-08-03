@@ -8,47 +8,58 @@ const search = (ev) => {
     // Set user's preferences (global variables) from the DOM:
     searchTerm = document.querySelector("#search_term").value;
     openOnly = document.querySelector("#is_open").checked;
-
+    console.log(searchTerm, openOnly);
     // Invoke the show matching courses function
     showMatchingCourses();
 };
 
+// not quite sure what's wrong with the code, I followed along with the video but nothing seemed to add up ╮(╯ _╰ )╭
+
+
 // Part 1.1a
-const isClassFull = (course) => {
-    // modify this to accurately apply the filter:
-    return true;
+const isClassOpen = (course) => {
+    if (openOnly)
+   { return course.EnrollmentCurrent < course.EnrollmentMax;
+        // if they're applying the "open only" filter, only then do we want to check this condition, otherwise we're returning true ^^^^
+        } 
 };
 
 // Part 1.1b
 const doesTermMatch = (course) => {
-    // modify this to accurately apply the filter:
-    return true;
+    let match = false;
+
+    // title check
+    if (course.Title.toLowerCase().includes(searchTerm.toLowerCase())) {
+        match = true;
+    } 
+    return match;
 };
 
 // Part 1.2
 const dataToHTML = (course) => {
     // modify this to be more detailed
     let status;
-    if (isClassFull(course)) {
-        status = '<i class="fa-solid fa-circle-check"></i> Closed'
+    if (!isClassOpen(course)) {
+        status = `<i class="fa-solid fa-circle-xmark"></i> Closed`
     } else {
-        status = '<i class="fa-solid fa-circle-check"></i> Open'
+         status = `<i class="fa-solid fa-circle-check"></i> Open`
     }
-    const seatsAvailable = course.EnrollmentMax - EnrollmentCurrent;
+    // creating a var. thats either gonna hold the check or x ^^
+    let seatsAvailable = course.EnrollmentMax - course.EnrollmentCurrent;
     if (seatsAvailable < 0) {
         seatsAvailable = 0;
     }
+    // removes negative numbers ^
     return `
-   <section class="course">
+        <section class="course">
             <h2>${course.Code}: ${course.Title}</h2>
             <p>
-                <i class="fa-solid fa-circle-check"></i> 
-                ${status}  &bull; ${course.CRN} &bull; Seats Available: 1
+                ${status}  &bull; ${course.CRN} &bull; Seats Available: ${seatsAvailable}
             </p>
             <p>
-                ${course.Days || "TBD"} &bull; ${course.Location.FullLocation|| "TBD"} &bull; ${course.Hours}
+                ${course.Days || "TBD"} &bull; ${course.Location.FullLocation || "TBD"} &bull; Credit Hours: ${course.Hours}
             </p>
-            <p>${course.Instructors[0].Name}</p>
+            <p><strong>${course.Instructors[0].Name}</strong></p>
         </section>
     `;
 };
@@ -61,16 +72,17 @@ const showMatchingCourses = () => {
 
     // output all of the matching courses to the screen:
     const container = document.querySelector(".courses");
-    container.innerHTML = null;
-    //filter by search term:
-    let matches = courseList.filter(doesTermMatch);
+    container.innerHTML = null; // you can do null or empty string
 
+    // filter by search term:
+    let matches = courseList.filter(doesTermMatch);
+    if (openOnly) {
+        matches = matches.filter(isClassOpen);
+         // if they only want to see open courses, apply the filter ^^^
+    }
+    
     matches.forEach((course) => {
-        // if the class is open, show it:
         const snippet = dataToHTML(course);
         container.insertAdjacentHTML("beforeend", snippet);
-    }
-    )
+    });
 };
-
-
